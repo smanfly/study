@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"  >
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+ 	
+<style type="text/css">
+	
+input {
+	border: none;
+}
+
+.btn {
+	background-color: #039BE5;
+	width: 120px;
+   	height: 150px;
+   	font-family: 'Roboto';
+   	font-weight: 700;
+   	font-size: 40px;
+   	color: white;
+}
+
+.sbtn {
+	background-color: #03A9F4;
+	width: 120px;
+   	height: 120px;
+	font-family: 'Roboto';
+   	font-weight: 700;
+   	font-size: 40px;
+   	color: white;
+
+}
+
+.result {
+	background-color: #81D4FA;
+	width: 480px;
+   	height: 200px;
+   	font-family: 'Roboto';
+   	font-weight: 700;
+   	font-size: 50px;
+   	text-align: right;
+   	vertical-align: text-bottom;
+   	color: white;
+}
+
+.table {
+	
+	border: none;
+	border-collapse: collapse;
+}
+
+.tg-colleft {
+	background-color: #03A9F4;
+	width: 360px;
+	height: 120px;
+}
+
+.tg-colright {
+	background-color: #03A9F4;
+	width: 120px;
+	height: 480px;
+}
+
+.tg-text {
+	background-color: #81D4FA;
+	width: 480px;
+	height: 200px;
+}
+
+body {
+	background-color: #212121;
+}
+</style>
+</head>
+<body>
+<div align="center">
+
+
+<form name="frm" > 
+<table class="table">
+  <tr>
+    <th colspan="4" class="tg-text">
+	<input name="result" class="result" id="text" ></input>
+
+	</th>
+	</tr>
+	<tr class="tg-colleft" >
+    <td  colspan="3">
+	<input name="7" value="7" class="btn" class="col-md-3" type="button" onClick="run7();"></input>
+	<input name="8" value="8" class="btn" class="col-md-3" type="button" onclick="run8();"></input>
+	<input name="9" value="9" class="btn" class="col-md-3" type="button" onclick="run9();"></input>
+	</td>
+	<td class="tg-colright" rowspan="4">
+	<input name="C" value="C" class="sbtn" class="col-md-3" type="button" onclick="reset();"></input>
+	<input name="div" value="/" class="sbtn" type="button" onclick="rundiv();"></input> 
+	<input name="mult" value="*"" class="sbtn" type="button" onclick="runmult();"></input> 
+	<input name="sub" value="-" class="sbtn" type="button" onclick="runsub();"></input>  
+	<input name="plus" value="+" class="sbtn" type="button" onclick="runplus();"></input> 
+	</td>
+	</tr>
+	 <tr>
+    <td class="tg-colleft" colspan="3">
+	<input name="4" value="4" class="btn" class="col-md-3" type="button" onclick="run4();"></input>
+	<input name="5" value="5" class="btn" class="col-md-3" type="button" onclick="run5();"></input>
+	<input name="6" value="6" class="btn" class="col-md-3" type="button" onclick="run6();"></input>
+	</td>
+	</tr>
+	<tr>
+    <td class="tg-colleft" colspan="3">
+	<input name="1" value="1" class="btn" class="col-md-3" type="button" onclick="run1();"></input>
+	<input name="2" value="2" class="btn" class="col-md-3" type="button" onclick="run2();"></input>
+	<input name="3" value="3" class="btn" class="col-md-3" type="button" onclick="run3();"></input>
+	</td>
+	</tr>
+	<tr>
+    <td class="tg-colleft" colspan="3">
+	<input name="dot" value="." class="btn" class="col-md-3" type="button" onclick="rundot();"></input>
+	<input name="0" value="0" class="btn" class="col-md-3" type="button" onclick="run0();"></input>
+	<input name="eq" value="=" class="btn" class="col-md-3" type="button" onclick="evalu();"></input>
+	</td>
+	</tr>
+</table>
+	</form>
+	</div>
+
+<script type="text/javascript"> 
+
+function evalu()
+{
+	var evalo = eval(document.frm.result.value)
+	document.frm.result.value = evalo
+}
+
+function run1()
+			{document.frm.result.value += "1";}
+function run2()
+			{document.frm.result.value += "2";}
+function run3()
+			{document.frm.result.value += "3";}
+function run4()
+			{document.frm.result.value += "4";}
+function run5()
+			{document.frm.result.value += "5";}			
+function run6()
+			{document.frm.result.value += "6";}
+function run7()
+			{document.frm.result.value += "7";}
+function run8()
+			{document.frm.result.value += "8";}
+function run9()
+			{document.frm.result.value += "9";}
+function run0()
+			{document.frm.result.value += "0";}
+function runplus()
+			{document.frm.result.value += "+";}
+function runmin()
+			{document.frm.result.value += "-";}
+function rundiv()
+			{document.frm.result.value += "/";}
+function runsub()
+			{document.frm.result.value += "-";}
+function runmult()
+			{document.frm.result.value += "*";}
+function runeq()
+			{document.frm.result.value += "=";}
+function reset()
+			{document.frm.result.value = "0";}
+
+</script> 
+</body>
+</html>
