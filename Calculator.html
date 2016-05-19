@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Calculator</title>
 	<link rel="stylesheet"  >
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
  	
@@ -47,6 +48,7 @@ input {
 	
 	border: none;
 	border-collapse: collapse;
+	
 }
 
 .tg-colleft {
@@ -67,6 +69,13 @@ input {
 	height: 200px;
 }
 
+.item:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
 body {
 	background-color: #212121;
 }
@@ -76,7 +85,7 @@ body {
 <div align="center">
 
 
-<form name="frm" > 
+<form name="form" > 
 <table class="table">
   <tr>
     <th colspan="4" class="tg-text">
@@ -86,12 +95,12 @@ body {
 	</tr>
 	<tr class="tg-colleft" >
     <td  colspan="3">
-	<input name="7" value="7" class="btn" class="col-md-3" type="button" onClick="run7();"></input>
-	<input name="8" value="8" class="btn" class="col-md-3" type="button" onclick="run8();"></input>
-	<input name="9" value="9" class="btn" class="col-md-3" type="button" onclick="run9();"></input>
+	<input name="7" value="7" class="btn" type="button" onClick="run7();"></input>
+	<input name="8" value="8" class="btn" type="button" onclick="run8();"></input>
+	<input name="9" value="9" class="btn" type="button" onclick="run9();"></input>
 	</td>
 	<td class="tg-colright" rowspan="4">
-	<input name="C" value="C" class="sbtn" class="col-md-3" type="button" onclick="reset();"></input>
+	<input name="C" value="C" class="sbtn" type="button" onclick="reset();"></input>
 	<input name="div" value="/" class="sbtn" type="button" onclick="rundiv();"></input> 
 	<input name="mult" value="*"" class="sbtn" type="button" onclick="runmult();"></input> 
 	<input name="sub" value="-" class="sbtn" type="button" onclick="runsub();"></input>  
@@ -100,23 +109,23 @@ body {
 	</tr>
 	 <tr>
     <td class="tg-colleft" colspan="3">
-	<input name="4" value="4" class="btn" class="col-md-3" type="button" onclick="run4();"></input>
-	<input name="5" value="5" class="btn" class="col-md-3" type="button" onclick="run5();"></input>
-	<input name="6" value="6" class="btn" class="col-md-3" type="button" onclick="run6();"></input>
+	<input name="4" value="4" class="btn" type="button" onclick="run4();"></input>
+	<input name="5" value="5" class="btn" type="button" onclick="run5();"></input>
+	<input name="6" value="6" class="btn" type="button" onclick="run6();"></input>
 	</td>
 	</tr>
 	<tr>
     <td class="tg-colleft" colspan="3">
-	<input name="1" value="1" class="btn" class="col-md-3" type="button" onclick="run1();"></input>
-	<input name="2" value="2" class="btn" class="col-md-3" type="button" onclick="run2();"></input>
-	<input name="3" value="3" class="btn" class="col-md-3" type="button" onclick="run3();"></input>
+	<input name="1" value="1" class="btn" type="button" onclick="run1();"></input>
+	<input name="2" value="2" class="btn" type="button" onclick="run2();"></input>
+	<input name="3" value="3" class="btn" type="button" onclick="run3();"></input>
 	</td>
 	</tr>
 	<tr>
     <td class="tg-colleft" colspan="3">
-	<input name="dot" value="." class="btn" class="col-md-3" type="button" onclick="rundot();"></input>
-	<input name="0" value="0" class="btn" class="col-md-3" type="button" onclick="run0();"></input>
-	<input name="eq" value="=" class="btn" class="col-md-3" type="button" onclick="evalu();"></input>
+	<input name="dot" value="." class="btn" type="button" onclick="rundot();"></input>
+	<input name="0" value="0" class="btn" type="button" onclick="run0();"></input>
+	<input name="eq" value="=" class="btn" type="button" onclick="evalu();"></input>
 	</td>
 	</tr>
 </table>
@@ -127,44 +136,44 @@ body {
 
 function evalu()
 {
-	var evalo = eval(document.frm.result.value)
-	document.frm.result.value = evalo
+	var evalo = eval(document.form.result.value)
+	document.form.result.value = evalo
 }
 
 function run1()
-			{document.frm.result.value += "1";}
+			{document.form.result.value += "1";}
 function run2()
-			{document.frm.result.value += "2";}
+			{document.form.result.value += "2";}
 function run3()
-			{document.frm.result.value += "3";}
+			{document.form.result.value += "3";}
 function run4()
-			{document.frm.result.value += "4";}
+			{document.form.result.value += "4";}
 function run5()
-			{document.frm.result.value += "5";}			
+			{document.form.result.value += "5";}			
 function run6()
-			{document.frm.result.value += "6";}
+			{document.form.result.value += "6";}
 function run7()
-			{document.frm.result.value += "7";}
+			{document.form.result.value += "7";}
 function run8()
-			{document.frm.result.value += "8";}
+			{document.form.result.value += "8";}
 function run9()
-			{document.frm.result.value += "9";}
+			{document.form.result.value += "9";}
 function run0()
-			{document.frm.result.value += "0";}
+			{document.form.result.value += "0";}
 function runplus()
-			{document.frm.result.value += "+";}
+			{document.form.result.value += "+";}
 function runmin()
-			{document.frm.result.value += "-";}
+			{document.form.result.value += "-";}
 function rundiv()
-			{document.frm.result.value += "/";}
+			{document.form.result.value += "/";}
 function runsub()
-			{document.frm.result.value += "-";}
+			{document.form.result.value += "-";}
 function runmult()
-			{document.frm.result.value += "*";}
+			{document.form.result.value += "*";}
 function runeq()
-			{document.frm.result.value += "=";}
+			{document.form.result.value += "=";}
 function reset()
-			{document.frm.result.value = "0";}
+			{document.form.result.value = "0";}
 
 </script> 
 </body>
