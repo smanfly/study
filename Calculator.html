@@ -24,8 +24,8 @@ input {
 .sbtn {
 	background-color: #03A9F4;
 	width: 120px;
-   	height: 120px;
-	font-family: 'Roboto';
+   	height: 120px;	font-family: 'Roboto';
+
    	font-weight: 700;
    	font-size: 40px;
    	color: white;
@@ -83,14 +83,11 @@ body {
 </head>
 <body>
 <div align="center">
-
-
 <form name="form" > 
 <table class="table">
   <tr>
     <th colspan="4" class="tg-text">
-	<input name="result" class="result" id="text" ></input>
-
+	<input name="result" class="result"  ></input>
 	</th>
 	</tr>
 	<tr class="tg-colleft" >
@@ -100,7 +97,7 @@ body {
 	<input name="9" value="9" class="btn" type="button" onclick="run9();"></input>
 	</td>
 	<td class="tg-colright" rowspan="4">
-	<input name="C" value="C" class="sbtn" type="button" onclick="reset();"></input>
+	<input name="C" value="C" class="sbtn" type="button" onclick="rmv();" ondblclick="reset();"></input>
 	<input name="div" value="/" class="sbtn" type="button" onclick="rundiv();"></input> 
 	<input name="mult" value="*"" class="sbtn" type="button" onclick="runmult();"></input> 
 	<input name="sub" value="-" class="sbtn" type="button" onclick="runsub();"></input>  
@@ -131,7 +128,6 @@ body {
 </table>
 	</form>
 	</div>
-
 <script type="text/javascript"> 
 
 function evalu()
@@ -174,6 +170,13 @@ function runeq()
 			{document.form.result.value += "=";}
 function reset()
 			{document.form.result.value = "0";}
+
+function rmv() 
+			{
+				var string = document.form.result.value; 
+				var str = string.substring(0, string.length-1);
+				document.form.result.value = str;
+			}
 
 </script> 
 </body>
