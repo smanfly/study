@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  </head>
+  <body>
+  <button id="submit" onclick="shuffle();"> Shuffle</button>
+  <div id="output"></div>
+<script type="text/javascript">
+function shuffle() {
+
+  var myArray = [1, 2, 3 ]; //elemente
+  var currentPass = myArray.length;
+  var index, temp;
+
+  while (currentPass > 0) {
+    index = Math.floor(Math.random() * currentPass);
+    currentPass--;
+
+    temp = myArray[currentPass];
+    myArray[currentPass] = myArray[index];
+    myArray[index] = temp;
+  }
+  document.getElementById('output').innerHTML = myArray
+}
+</script>
+</body>
+
+
+---------------------------------------------------------------------
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <blockquote>
+              <p>   A   </p>
+              <footer>   B   </footer>
+            </blockquote>
+        </div>
+    </div>
+
+    
+
+
+
+Aici am 2 exemple si as vrea sa le combin
+
+1. Linia 25 ".innerHTML" vreau sa imi adauge text in A, se intampla la accesarea pagini sa incarce o parte din elemente ex:25
+2. Elementele - in ex. este definit "1, 2, 3" vreau sa inlocuiesc numerele cu content (text 100-1000 caractere)
+	Cum dau valori de tip string  in "var myArray = [1, 2, 3 ];" fara sa umplu functia de text?
+	O baza de date ar fi cea mai buna metoda dar nu stiu sa import date din acel tabel...
+	cum il fac sa isi ia un text dintr-o casuta random din db?
+3. Sa fie fara sfarsit si in timp ce dai scrool sa iti incarce alte 25 random dar sa nu fie aceleasi and so on.....
