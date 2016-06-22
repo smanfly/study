@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Select Jokes</title>
+	<meta name="description" content="Select Jokes">
+	<!-- Latest compiled and minified CSS -->
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Roboto -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+</head>
+
+	<style>
+
+	body{
+		padding-top: 50px;
+		font-family: 'Roboto';
+	}
+
+	li {
+		   	font-weight: 700;
+   			font-size: 25px;
+   			border: 0px;
+	}
+
+
+
+	.logo {
+		font-size: 40px;
+		font-weight: 700;
+	}
+
+	</style>
+
+<body data-spy="scroll" data-target="#my-navbar">
+
+  <!-- Navbar -->
+  	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+  		<div class="container">
+  			<div class="navbar-header">
+  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+  					<span class="sr-only"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+
+  				<a href="" class="navbar-brand logo">Select Jokes</a>
+  			</div><!-- Navbar Header-->
+  			<div class="collapse navbar-collapse .topnavbar" id="navbar-collapse">
+  				
+  			
+  				<ul class="nav navbar-nav">
+  					<li><a href="#feedback" >New</a> 
+  					<li><a href="#gallery">Hot</a> 
+  					<li><a href="#features">Select</a> 
+  					<li><a href="#faq">Images</a> 
+  					<li><a href="#contact">Dev Notes</a> 
+  				</ul>
+  			</div>
+  		</div><!-- End Container-->
+  	</nav><!-- End navbar -->
+
+ 
+
+  	<!-- Feedback-->
+  	<div class="container">
+  		<section>
+  			<div class="page-header" id="feedback">
+  				<h2>Classic jokes<small> Suscribe for more!</small></h2>
+  			</div>
+
+  			<div class="row">
+  				<div class="col-md-3">
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Integer tristique magna in mollis laoreet. Etiam ex augue, fermentum non egestas eget, vulputate eu erat. Curabitur non velit eget nunc commodo luctus. Aliquam leo nisl, efficitur vel tempor sit amet, aliquet id urna.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  				</div>
+  				<div class="col-md-3">
+  					<blockquote>
+  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<br>
+  					<blockquote>
+  						<p>Integer tristique magna in mollis laoreet. Etiam ex augue, fermentum non egestas eget, vulputate eu erat. Curabitur non velit eget nunc commodo luctus. Aliquam leo nisl, efficitur vel tempor sit amet, aliquet id urna.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  				</div>
+  					<div class="col-md-3">
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  				</div>
+  				<div class="col-md-3">
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					<br>
+  					<blockquote>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
+  						<footer>John doe</footer>
+  					</blockquote>
+  					
+  				</div>
+  			</div><!-- End row -->
+  		</section>
+  	</div><!--End Container-->
+
+
+
+<!-- Footer -->
+
+    <footer>
+      <hr>
+        <div class="container text-center">
+        <h3>Subscribe for more free stuff</h3>
+        <p>Enter your name and email</p>
+
+        <form action="" class="form-inline">
+          <div class="form-group">
+            <label for="subscription">Subscribe</label>
+            <input type="text" class="form-control" id="subscription" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter your Email">
+          </div>
+          <button type="submit" class="btn btn-default">Subscribe</button>
+          
+        </form>
+
+        <hr>
+        <ul class="list-inline">
+          <li><a href="http://www.twitter.com/Smanfly" target="_blank">Twitter</a></li>
+          <li><a href="http://www.facebook.com/Smanfly" target="_blank">Facebook</a></li>
+          <li><a href="http://www.youtube.com/Rikimarufly" target="_blank">YouTube</a></li>
+        </ul>
+
+        <p>&copy; Copyright @ 2016</p>
+
+      </div><!-- end Container-->
+      
+
+    </footer>
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>	
+</html>
