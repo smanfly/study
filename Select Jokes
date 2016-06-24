@@ -1,22 +1,60 @@
+<?php
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
+
+
+/// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT id, jokes, rating FROM jokes";
+$sqll = "SELECT id, jokes, rating FROM jokes2";
+$sqlll = "SELECT id, jokes, rating FROM jokes3";
+$result = $conn->query($sql);
+$result2 = $conn->query($sqll);
+$result3 = $conn->query($sqlll);
+
+
+            // if ($result->num_rows > 0) {
+            //      // output data of each row
+            //      while($row = $result->fetch_assoc()) {
+            //          echo "<blockquote>" . "<p>" . $row["jokes"] . "</p>" . "</blockquote>" .  "<br>" . "<footer>" . $row["rating"] . "</footer>"  ; 
+            //      }
+            // } else {
+            //      echo "error";
+            // }
+
+            // $conn->close();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<title>Select Jokes</title>
-	<meta name="description" content="Select Jokes">
+	<meta name="description" content="Select Jokes is the place to go for best high class jokes. We will scout the internet and find the top jokes for you.">
 	<!-- Latest compiled and minified CSS -->
 	 <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
+	<!-- Font Awsome -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- Roboto -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 
 	<style>
 
+
 	body{
-		padding-top: 50px;
+		padding: 30px;
 		font-family: 'Roboto';
 	}
 
@@ -35,10 +73,21 @@
   .mynavbar { min-width: 310px;
 
   }
+  
+  .fbbtn { 
+  	  position: relative;
+  	  float: right;
+  
+  }
+  .cont {
+  	height: auto;
+  	
+  	}
 
 	</style>
 
 <body data-spy="scroll" data-target="#my-navbar">
+
 
   <!-- Navbar -->
   	<nav class="navbar navbar-default navbar-fixed-top mynavbar" id="my-navbar">
@@ -55,13 +104,14 @@
   			</div><!-- Navbar Header-->
   			<div class="collapse navbar-collapse .topnavbar" id="navbar-collapse">
   				
-  			
+  		<a href="http://www.facebook.com/SelectJokes" target="_blank"><i class="fa fa-facebook-official btn navbar-right fbbtn" style="font-size:36px"></i></a>
+
   				<ul class="nav navbar-nav">
-  					<li><a href="#feedback" >New</a> 
-  					<li><a href="#gallery">Hot</a> 
-  					<li><a href="#features">Select</a> 
-  					<li><a href="#faq">Images</a> 
-  					<li><a href="#contact">Dev Notes</a> 
+  					<li><a href="#New" >New</a> 
+  					<li><a href="#Hot">Hot</a> 
+  					<li><a href="#Select">Select</a> 
+  					<li><a href="#Images">Images</a> 
+  					<li><a href="#Dev Notes">Dev Notes</a> 
   				</ul>
   			</div>
   		</div><!-- End Container-->
@@ -69,97 +119,71 @@
 
  
 
-  	<!-- Feedback-->
+  	<!-- Content-->
   	<div class="container">
   		<section>
-  			<div class="page-header" id="feedback">
+  			<div class="page-header" id="content">
   				<h2>Classic jokes<small> Suscribe for more!</small></h2>
   			</div>
 
   			<div class="row">
-  				<div class="col-md-3">
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Integer tristique magna in mollis laoreet. Etiam ex augue, fermentum non egestas eget, vulputate eu erat. Curabitur non velit eget nunc commodo luctus. Aliquam leo nisl, efficitur vel tempor sit amet, aliquet id urna.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  				</div>
-  				<div class="col-md-3">
-  					<blockquote>
-  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<br>
-  					<blockquote>
-  						<p>Integer tristique magna in mollis laoreet. Etiam ex augue, fermentum non egestas eget, vulputate eu erat. Curabitur non velit eget nunc commodo luctus. Aliquam leo nisl, efficitur vel tempor sit amet, aliquet id urna.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  				</div>
-  					<div class="col-md-3">
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  				</div>
-  				<div class="col-md-3">
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Morbi dignissim ullamcorper tortor, sit amet pharetra augue consequat sed. Etiam nisi lacus, ultricies sit amet mauris sit amet, gravida tristique dui. Quisque ac felis malesuada, bibendum libero ut, malesuada nibh. Nulla ex nisl, condimentum a eleifend et, bibendum eget justo. Vivamus porta commodo est eget facilisis. Integer felis augue, dapibus eget sapien laoreet, convallis consequat nisl. Sed quis tortor eu mi tincidunt porta.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					<br>
-  					<blockquote>
-  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed tellus vitae lorem mattis lobortis. Vestibulum non rutrum enim. Donec facilisis auctor arcu ut finibus.</p>
-  						<footer>John doe</footer>
-  					</blockquote>
-  					
-  				</div>
-  			</div><!-- End row -->
+          
+     
+
+  
+  	<div class="col-md-4 cont">
+  	<?php while($row = $result->fetch_assoc()): ?> 
+            <blockquote>
+              
+              <p>
+              
+                <?=$row["jokes"]?>
+              </p>
+              <footer>
+                <?=$row['rating']?>
+              </footer>
+            </blockquote>
+	<?php endwhile;?>
+	</div>
+	
+	
+  	<div class="col-md-4 cont">
+  	<?php while($row = $result2->fetch_assoc()): ?> 
+            <blockquote>
+              
+              <p>
+              
+                <?=$row["jokes"]?>
+              </p>
+              <footer>
+                <?=$row['rating']?>
+              </footer>
+            </blockquote>
+	<?php endwhile;?>
+	</div>
+	
+	<div class="col-md-4 cont">
+  	<?php while($row = $result3->fetch_assoc()): ?> 
+            <blockquote>         
+              <p>
+                <?=$row["jokes"]?>
+              </p>
+              <footer>
+                <?=$row['rating']?>
+              </footer>
+            </blockquote>
+	<?php endwhile;?>
+	</div>
+	
+	
+	
+		
+	
+	
+	
+	
+	
+           			</div><!-- End row -->
   		</section>
   	</div><!--End Container-->
 
@@ -170,7 +194,7 @@
     <footer>
       <hr>
         <div class="container text-center">
-        <h3>Subscribe for more free stuff</h3>
+        <h3>Subscribe for more stuff</h3>
         <p>Enter your name and email</p>
 
         <form action="" class="form-inline">
@@ -189,7 +213,7 @@
         <hr>
         <ul class="list-inline">
           <li><a href="http://www.twitter.com/Smanfly" target="_blank">Twitter</a></li>
-          <li><a href="http://www.facebook.com/Smanfly" target="_blank">Facebook</a></li>
+          <li><a href="http://www.facebook.com/SelectJokes" target="_blank">Facebook</a></li>
           <li><a href="http://www.youtube.com/Rikimarufly" target="_blank">YouTube</a></li>
         </ul>
 
@@ -203,5 +227,8 @@
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
 </body>	
 </html>
